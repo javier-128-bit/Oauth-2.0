@@ -3,7 +3,6 @@ import 'package:birdle/widget/imgpick/imgpick_widget.dart';
 import 'package:birdle/widget/textfield/textfield_email_widget.dart';
 import 'package:birdle/widget/textfield/textfield_password_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {

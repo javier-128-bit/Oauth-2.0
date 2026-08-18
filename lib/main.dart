@@ -1,5 +1,8 @@
 import 'package:birdle/provider/authProvider.dart';
 import 'package:birdle/provider/imgPickProvider.dart';
+import 'package:birdle/screen/homescreen.dart';
+import 'package:birdle/screen/loginscreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
@@ -21,8 +24,22 @@ class MainApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => Authprovider()),
         ChangeNotifierProvider(create: (_) => Imgpickprovider()),
       ],
-      child: const MaterialApp(
-        home: Scaffold(body: Center(child: Text('Hello World!'))),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          primarySwatch: Colors.green,
+        ),
+        themeMode: ThemeMode.dark,
+        home: StreamBuilder(
+          stream: FirebaseAuth.instance.authStateChanges(),
+          builder: (ctx, snapshot) {
+            if (snapshot.hasData) {
+              return const Homescreen();
+            }
+            return const LoginScreen();
+          },
+        ),
       ),
     );
   }
