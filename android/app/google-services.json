@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "498768829442",
+    "project_id": "nyoba-cb6cb",
+    "storage_bucket": "nyoba-cb6cb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498768829442:android:6b4f8964b16abae43a5b1b",
+        "android_client_info": {
+          "package_name": "com.example.birdle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRdW5JxiClC2qhSRNdbIOhuZd_4oFY8Sk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498768829442:android:a66c2f1eb7c455143a5b1b",
+        "android_client_info": {
+          "package_name": "com.example.nyobsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRdW5JxiClC2qhSRNdbIOhuZd_4oFY8Sk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
