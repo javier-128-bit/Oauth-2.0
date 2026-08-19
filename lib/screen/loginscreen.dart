@@ -138,6 +138,31 @@ class _LoginScreenState extends State<LoginScreen> {
                                     : "I already have account",
                               ),
                             ),
+                            const SizedBox(height: 10),
+                            const Row(
+                              children: [
+                                Expanded(child: Divider()),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 8),
+                                  child: Text("OR"),
+                                ),
+                                Expanded(child: Divider()),
+                              ],
+                            ),
+                            const SizedBox(height: 10),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width,
+                              child: OutlinedButton.icon(
+                                onPressed: loadAuth.isLoading
+                                    ? null
+                                    : () => loadAuth.signInWithGoogle(),
+                                icon: Image.asset(
+                                  'images/google_logo.png',
+                                  height: 24,
+                                ), // siapkan asset
+                                label: const Text("Continue with Google"),
+                              ),
+                            ),
                           ],
                         ),
                       ),
